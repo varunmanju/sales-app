@@ -28,9 +28,9 @@ def users():
 
     return render_template('users.html',users=users)
 
-# @app.route('/courses')
-# def users():
-#     course_recs=db.session.query(Course).all()
-#     courses=list(map(lambda rec: rec.__dict__,course_recs))
+@app.route('/courses')
+def courses():
+     course_recs=db.session.query(Course).all()
+     courses=list(map(lambda rec: rec.__dict__,course_recs))
 
-#     return render_template('courses.html',courses=courses)
+     return render_template('courses.html',courses=courses)
